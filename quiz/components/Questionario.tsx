@@ -15,13 +15,14 @@ export default function Questionario(props: QuestionarioProps) {
       props.questaoRespondida(props.questao.responderCom(indice));
     }
   };
+
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen max-h-[1080px]">
       {props.questao ? (
         <Questao
           valor={props.questao}
           respostaFornecida={respostaFornecida}
-          tempoParaResposta={6}
+          tempoParaResposta={10}
           tempoEsgotado={props.irParaProximoPasso}
         />
       ) : (
